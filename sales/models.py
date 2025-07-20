@@ -16,8 +16,7 @@ class Vend(models.Model):
     date_sale = models.DateTimeField(verbose_name='Data da Venda',)
     payment = models.CharField(choices=PAYMENT_OPTION_STATUS, default='CREDITO', verbose_name='Metodo Pagamento',)
     value = models.IntegerField(verbose_name='Valor Final',)
-
-
+    update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
 
     class Meta:
         verbose_name = 'Venda'
@@ -30,8 +29,10 @@ class SalesProposal(models.Model):
         ('ACEITA', 'Aceita'),
         ('RECUSADA', 'Recusada'),
     ]
+    
     status = models.CharField(choices=STATUS_CHOICES, default='AGUARDANDO', verbose_name='Status da Proposta',)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, verbose_name='Cliente',)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, verbose_name='Veiculo',)
     value = models.IntegerField(verbose_name='Valor Final',)
     date_proposal = models.DateTimeField(verbose_name='Data da Prosposta',)
+    update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)

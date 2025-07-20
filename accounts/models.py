@@ -7,6 +7,8 @@ class Customer(models.Model):
     cpf = models.IntegerField(max_length=11, unique=True, verbose_name='CPF',)
     telephone = models.IntegerField(max_length=9, verbose_name='Telefone',)
     address = models.CharField(max_length=255, verbose_name='Endereço',)
+    created_ad = models.DateTimeField(auto_now_add=True, verbose_name='Criando em',)
+    update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
 
     class Meta:
         verbose_name = 'Usuario'
@@ -20,6 +22,8 @@ class Saller(models.Model):
     name = models.CharField(max_length=255, verbose_name='Nome',)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, null= True, verbose_name='Cliente',)
     telephone = models.IntegerField(max_length=15, verbose_name='Telefone',)
+    created_ad = models.DateTimeField(auto_now_add=True, verbose_name='Criando em',)
+    update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
 
     class Meta:
         verbose_name = 'Vendedor'
