@@ -3,10 +3,10 @@ from django.contrib.auth.models import User
 
 
 class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    cpf = models.IntegerField(max_length=11, unique=True)
-    telephone = models.IntegerField(max_length=9)
-    address = models.CharField(max_length=255)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, verbose_name='Cliente',)
+    cpf = models.IntegerField(max_length=11, unique=True, verbose_name='CPF',)
+    telephone = models.IntegerField(max_length=9, verbose_name='Telefone',)
+    address = models.CharField(max_length=255, verbose_name='Endereço',)
 
     class Meta:
         verbose_name = 'Usuario'
@@ -17,9 +17,9 @@ class Customer(models.Model):
     
 
 class Saller(models.Model):
-    name = models.CharField(max_length=255)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, null= True)
-    telephone = models.IntegerField(max_length=15)
+    name = models.CharField(max_length=255, verbose_name='Nome',)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, null= True, verbose_name='Cliente',)
+    telephone = models.IntegerField(max_length=15, verbose_name='Telefone',)
 
     class Meta:
         verbose_name = 'Vendedor'
