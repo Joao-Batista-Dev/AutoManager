@@ -10,13 +10,6 @@ class Vend(models.Model):
         ('CREDITO', 'Credito'),
     ]
 
-    VEND_STATUS_CHOICES = [
-        ('AGUARDANDO', 'Aguardando'),
-        ('ACEITA', 'Aceita'),
-        ('RECUSADA', 'Recusada'),
-    ]
-
-
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, verbose_name='Cliente',)
     saller = models.ForeignKey(Saller, on_delete=models.CASCADE, verbose_name='Vendedor',)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, verbose_name='Veiculo',)

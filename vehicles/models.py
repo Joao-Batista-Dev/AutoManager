@@ -3,7 +3,7 @@ from accounts.models import Customer
 
 class Vehicle(models.Model):
     name = models.CharField(max_length=255, verbose_name='Nome',)
-    mark = models.CharField(max_length=255, blank=True, null=True, verbose_name='Marca',)
+    brand = models.CharField(max_length=255, blank=True, null=True, verbose_name='Marca',)
     year = models.IntegerField(max_length=4, blank=True, null=True, verbose_name='Ano',)
     color = models.CharField(max_length=255, blank=True, null=True, verbose_name='Cor',)
     mileage = models.IntegerField(max_length=10, blank=True, null=True, verbose_name='Quilometragem',)
