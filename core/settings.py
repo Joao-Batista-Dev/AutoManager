@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # django rest framework
 
     # apps
-    'users',
     'vehicles',
     'sales',
 ]
