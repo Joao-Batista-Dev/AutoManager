@@ -1,6 +1,7 @@
 from django.db import models
 from accounts.models import Customer, Saller
 from vehicles.models import Vehicle
+from django.utils import timezone
 
 
 class Vend(models.Model):
