@@ -4,9 +4,9 @@ from accounts.models import Customer, Saller
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user', 'cpf', 'telephone', 'address',]
-    search_fields = ['id', 'user', 'cpf',]
-    list_filter = ['user', 'cpf', 'telephone', 'address',]
+    list_display = ['id', 'name', 'email', 'cpf', 'telephone', 'address',]
+    search_fields = ['id', 'name', 'email', 'cpf',]
+    list_filter = ['name', 'cpf', 'email', 'telephone', 'address',]
     ordering = ['-id',]
 
 

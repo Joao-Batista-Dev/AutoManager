@@ -23,7 +23,7 @@ class Vehicle(models.Model):
 
 
 class TestDrive(models.Model):
-    custome = models.ForeignKey(Customer, on_delete=models.CASCADE, verbose_name='Cliente')
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, verbose_name='Cliente')
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, verbose_name='Veiculo')
     scheduling = models.DateTimeField(verbose_name='Data do Teste Drive')
     confirmed = models.BooleanField(default=False, verbose_name='Confirmado')

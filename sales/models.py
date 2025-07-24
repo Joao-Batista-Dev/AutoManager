@@ -36,3 +36,7 @@ class SalesProposal(models.Model):
     value = models.IntegerField(verbose_name='Valor Final',)
     date_proposal = models.DateTimeField(auto_now_add=True, verbose_name='Data da Prosposta',)
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
+
+    class Meta:
+        verbose_name = 'Proposta'
+        verbose_name_plural = 'Propostas'

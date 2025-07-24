@@ -12,7 +12,7 @@ class VehicleAdmin(admin.ModelAdmin):
 
 @admin.register(TestDrive)
 class TestDriveAdmin(admin.ModelAdmin):
-    list_display = ['custome', 'vehicle', 'scheduling', 'confirmed', 'update_at',]
-    search_fields = ['custome', 'vehicle', 'scheduling', 'confirmed', 'update_at',]
-    list_filter = ['custome', 'vehicle', 'scheduling', 'confirmed', 'update_at',]
+    list_display = ['customer', 'vehicle', 'scheduling', 'confirmed', 'update_at',]
+    search_fields = ['customer', 'vehicle', 'scheduling', 'confirmed', 'update_at',]
+    list_filter = ['customer', 'vehicle', 'scheduling', 'confirmed', 'update_at',]
     ordering = ['-id',]

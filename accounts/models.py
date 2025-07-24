@@ -1,9 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 
 class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, verbose_name='Cliente',)
+    name = models.CharField(max_length=255, blank=True, null=True, verbose_name='Nome',)
+    email = models.EmailField(blank=True, null=True, verbose_name='E-mail',)
     cpf = models.CharField(max_length=11, unique=True, verbose_name='CPF',)
     telephone = models.CharField(max_length=9,verbose_name='Telefone',)
     address = models.CharField(max_length=255, verbose_name='Endereço',)
