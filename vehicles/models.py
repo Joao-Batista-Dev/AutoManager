@@ -1,6 +1,5 @@
 from django.db import models
 from accounts.models import Customer
-from django.utils import timezone
 
 
 class Vehicle(models.Model):
@@ -12,7 +11,7 @@ class Vehicle(models.Model):
     price = models.IntegerField(blank=True, null=True, verbose_name='Valor Veiculo',)
     description = models.TextField(max_length=255, blank=True, null=True, verbose_name='Descrição',)
     available = models.BooleanField(default=False, verbose_name='Disponivel',), 
-    created_at = models.DateTimeField(auto_now_add=True, default=timezone.now, verbose_name='Criando em',)
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criando em',)
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
 
     class Meta:

@@ -4,9 +4,9 @@ from vehicles.models import Vehicle, TestDrive
 
 @admin.register(Vehicle)
 class VehicleAdmin(admin.ModelAdmin):
-    list_display = ['name', 'brand', 'year', 'color', 'mileage', 'price', 'description', 'available', 'created_ad', 'update_at',]
-    search_fields =  ['name', 'brand', 'year',  'created_ad',]
-    list_filter =  ['name', 'brand', 'year',  'created_ad',]
+    list_display = ['name', 'brand', 'year', 'color', 'mileage', 'price', 'description', 'available', 'created_at', 'update_at',]
+    search_fields =  ['name', 'brand', 'year',  'created_at',]
+    list_filter =  ['name', 'brand', 'year',  'created_at',]
     ordering = ['-id',]
 
 

@@ -1,7 +1,6 @@
 from django.db import models
 from accounts.models import Customer, Saller
 from vehicles.models import Vehicle
-from django.utils import timezone
 
 
 class Vend(models.Model):
@@ -14,7 +13,7 @@ class Vend(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, verbose_name='Cliente',)
     saller = models.ForeignKey(Saller, on_delete=models.CASCADE, verbose_name='Vendedor',)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, verbose_name='Veiculo',)
-    date_sale = models.DateTimeField(verbose_name='Data da Venda',)
+    date_sale = models.DateTimeField(auto_now_add=True, verbose_name='Data da Venda',)
     payment = models.CharField(choices=PAYMENT_OPTION_STATUS, default='CREDITO', verbose_name='Metodo Pagamento',)
     value = models.IntegerField(verbose_name='Valor Final',)
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
@@ -35,5 +34,5 @@ class SalesProposal(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, verbose_name='Cliente',)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, verbose_name='Veiculo',)
     value = models.IntegerField(verbose_name='Valor Final',)
-    date_proposal = models.DateTimeField(verbose_name='Data da Prosposta',)
+    date_proposal = models.DateTimeField(auto_now_add=True, verbose_name='Data da Prosposta',)
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
