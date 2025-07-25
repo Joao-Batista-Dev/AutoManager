@@ -11,11 +11,11 @@ class Customer(models.Model):
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
 
     class Meta:
-        verbose_name = 'Usuario'
-        verbose_name_plural = 'Usuarios'
+        verbose_name = 'Cliente'
+        verbose_name_plural = 'Clientes'
 
     def __str__(self):
-        return self.user
+        return self.name
     
 
 class Saller(models.Model):
