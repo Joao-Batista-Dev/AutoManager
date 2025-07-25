@@ -10,7 +10,7 @@ class Vehicle(models.Model):
     mileage = models.IntegerField(blank=True, null=True, verbose_name='Quilometragem',)
     price = models.IntegerField(blank=True, null=True, verbose_name='Valor Veiculo',)
     description = models.TextField(max_length=255, blank=True, null=True, verbose_name='Descrição',)
-    available = models.BooleanField(default=False, verbose_name='Disponivel',), 
+    available = models.BooleanField(default=True, verbose_name='Disponivel',), 
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criando em',)
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
 
