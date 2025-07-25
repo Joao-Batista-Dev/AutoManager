@@ -9,5 +9,5 @@ class VendApiV1ViewSet(ModelViewSet):
 
 
 class SalesProposalApiV1ViewSet(ModelViewSet):
-    queryset = SalesProposal
+    queryset = SalesProposal.objects.all()
     serializer_class = SalesProposalSerializers
