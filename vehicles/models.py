@@ -8,7 +8,7 @@ class Vehicle(models.Model):
     year = models.IntegerField(blank=True, null=True, verbose_name='Ano',)
     color = models.CharField(max_length=255, blank=True, null=True, verbose_name='Cor',)
     mileage = models.IntegerField(blank=True, null=True, verbose_name='Quilometragem',)
-    price = models.IntegerField(blank=True, null=True, verbose_name='Valor Veiculo',)
+    price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, verbose_name='Valor Veiculo',)
     description = models.TextField(max_length=255, blank=True, null=True, verbose_name='Descrição',)
     available = models.BooleanField(default=False, verbose_name='Disponivel',)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criando em',)
