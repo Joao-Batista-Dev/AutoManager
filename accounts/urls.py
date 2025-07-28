@@ -9,5 +9,5 @@ router.register('customer', CustomerApiV1ViewSet, basename='customer')
 router.register('saller', SallerApiV1ViewSet, basename='saller')
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
 ]
