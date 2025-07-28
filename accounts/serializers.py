@@ -13,7 +13,7 @@ class CustomerSerializers(serializers.ModelSerializer):
             return value
         
         def validate_telephone(self, value):
-            if len(value) != 9:
+            if len(value) != 11:
                 raise serializers.ValidationError('Seu Telefone dever conter 9 dígitos')
             return value
 

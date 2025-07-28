@@ -4,12 +4,12 @@ from accounts.models import Customer
 
 class Vehicle(models.Model):
     name = models.CharField(max_length=255, verbose_name='Nome',)
-    brand = models.CharField(max_length=255, blank=True, null=True, verbose_name='Marca',)
-    year = models.IntegerField(blank=True, null=True, verbose_name='Ano',)
-    color = models.CharField(max_length=255, blank=True, null=True, verbose_name='Cor',)
-    mileage = models.IntegerField(blank=True, null=True, verbose_name='Quilometragem',)
-    price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, verbose_name='Valor Veiculo',)
-    description = models.TextField(max_length=255, blank=True, null=True, verbose_name='Descrição',)
+    brand = models.CharField(max_length=255, verbose_name='Marca',)
+    year = models.IntegerField(verbose_name='Ano',)
+    color = models.CharField(max_length=255, verbose_name='Cor',)
+    mileage = models.IntegerField(verbose_name='Quilometragem',)
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Valor Veiculo',)
+    description = models.TextField(max_length=255, verbose_name='Descrição',)
     available = models.BooleanField(default=False, verbose_name='Disponivel',)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criando em',)
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em',)
