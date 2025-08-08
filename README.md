@@ -1,6 +1,6 @@
 # Sistema de Loja de Veiculos
 
-Bem-vindo ao ERP, um projeto desenvolvido em Django, Django REST Framewrok e Docker para facilitar o gerenciamento de veiculos. Este README fornece informações essenciais sobre como configurar e executar o projeto em seu ambiente local.
+Bem-vindo ao Sistema de Loja de Veiculos, um projeto desenvolvido em Django, Django REST Framewrok e Docker para facilitar o gerenciamento de veiculos. Este README fornece informações essenciais sobre como configurar e executar o projeto em seu ambiente local.
 
 ## Requisitos
 
